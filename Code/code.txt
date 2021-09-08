@@ -1,0 +1,55 @@
+
+                        int cts = 5;
+
+                        Random rand = new Random(); //instance of random class
+
+                        int a1 = 0;
+                        int a2 = 0;
+                        int a3 = 0;
+                        int a4 = 0;
+                        int a5 = 0;
+
+                        int upperbound = 10;  
+
+                        for (int i = 0; i <= cts; i++) {
+
+                            int_random = rand.nextInt(upperbound);                         //upperbound é o valor maximo que ele ira gerar aleatoriamente 
+
+                            while (int_random == 0) int_random = rand.nextInt(upperbound); // essa parte serve para eliminar o zero 
+                            if (i == 1){
+                                a1 = int_random;
+                            }
+                            if (i == 2){
+                                a2 = int_random;
+                                while (a2==a1){
+                                    int_random = rand.nextInt(upperbound);
+                                    while (int_random == 0) int_random = rand.nextInt(upperbound);
+                                    a2 = int_random;
+                                }
+                            }
+                            if (i == 3){
+                                a3 = int_random;
+                                while (a3==a2 || a3==a1){
+                                    int_random = rand.nextInt(upperbound);
+                                    while (int_random == 0) int_random = rand.nextInt(upperbound);
+                                    a3 = int_random;
+                                }
+                            }
+                            if (i == 4){
+                                a4 = int_random;
+                                while (a4==a3 || a4==a2 || a4==a1){
+                                    int_random = rand.nextInt(upperbound);
+                                    while (int_random == 0) int_random = rand.nextInt(upperbound);
+                                    a4 = int_random;
+                                }
+                            }
+                            if (i == 5){
+                                a5 = int_random;
+                                while (a5==a4 || a5==a3 || a5==a2 || a5==a1){
+                                    int_random = rand.nextInt(upperbound);
+                                    while (int_random == 0) int_random = rand.nextInt(upperbound);
+                                    a5 = int_random;
+                                }
+                            }
+                            
+                        }
